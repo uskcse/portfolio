@@ -1,10 +1,11 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { ContactForm } from './ContactForm';
-import { useContact } from '../context/ContactContext';
+// import { useContact } from '../context/ContactContext';
 
 export function Contact() {
-  const { isPhoneVisible } = useContact();
+  // const { isPhoneVisible } = useContact();
+  const isPhoneVisible = true;
   const phoneNumber = "+91-9677481090";
   const maskedNumber = "XX-XXXXXXXX90";
 

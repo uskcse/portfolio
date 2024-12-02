@@ -15,7 +15,7 @@ export function Hero() {
           Machine Learning Engineer | AI Specialist | MLOps Expert
         </p>
         <div className="flex justify-center gap-6 mb-12">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+          <a href="https://github.com/uskcse" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
             <Github size={24} />
           </a>
           <a href="https://www.linkedin.com/in/surya-kumar-8a1bb2138/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">

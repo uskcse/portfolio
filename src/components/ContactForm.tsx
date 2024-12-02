@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { sendEmail } from '../utils/email';
 import toast, { Toaster } from 'react-hot-toast';
-import { useContact } from '../context/ContactContext';
+// import { useContact } from '../context/ContactContext';
 import { emailConfig } from '../config/email.config';
 
 interface FormData {
@@ -11,7 +11,7 @@ interface FormData {
 }
 
 export function ContactForm() {
-  const { setPhoneVisible } = useContact();
+  // const { setPhoneVisible } = useContact();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -35,7 +35,7 @@ export function ContactForm() {
 
     try {
       await sendEmail(formData);
-      setPhoneVisible(true);
+      // setPhoneVisible(true);
       toast.success(
         emailConfig.isDevelopment
           ? 'Message sent successfully (Development Mode)'
