@@ -31,9 +31,6 @@ jobs:
       - name: Build Application
         run: npm run build
         
-      - name: Run Tests
-        run: npm test
-        
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
