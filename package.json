@@ -3,15 +3,21 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "deploy:azure": "bash scripts/setup-azure.sh"
+    "deploy:azure": "bash scripts/setup-azure.sh",
+    "start": "node server.js"
   },
   "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.18.3",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -19,6 +25,8 @@
   "devDependencies": {
     "@azure/storage-blob": "^12.17.0",
     "@eslint/js": "^9.9.1",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.24",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
