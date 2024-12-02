@@ -30,6 +30,10 @@ jobs:
         
       - name: Build Application
         run: npm run build
+        env:
+          VITE_EMAILJS_SERVICE_ID: ${{ env.EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ env.EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ env.EMAILJS_PUBLIC_KEY }}
         
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3

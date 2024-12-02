@@ -1,7 +1,14 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { ContactForm } from './ContactForm';
+// import { useContact } from '../context/ContactContext';
 
 export function Contact() {
+  // const { isPhoneVisible } = useContact();
+  const isPhoneVisible = true;
+  const phoneNumber = "+91-9677481090";
+  const maskedNumber = "XX-XXXXXXXX90";
+
   return (
     <section className="py-20 bg-white" id="contact">
       <div className="max-w-6xl mx-auto px-4">
