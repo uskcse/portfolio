@@ -9,13 +9,13 @@ interface EmailConfig {
     const isDevelopment = import.meta.env.DEV || import.meta.env.VITE_DEV_MODE === 'true';
   
     // Check for local environment variables first
-    const localServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const localTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const localPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const localServiceId = import.meta.env.EMAILJS_SERVICE_ID;
+    const localTemplateId = import.meta.env.EMAILJS_TEMPLATE_ID;
+    const localPublicKey = import.meta.env.EMAILJS_PUBLIC_KEY;
   
     // If all local env vars are present, use them even in development
     if (localServiceId && localTemplateId && localPublicKey) {
-      return {
+      return {  
         serviceId: localServiceId,
         templateId: localTemplateId,
         publicKey: localPublicKey,
