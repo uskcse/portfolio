@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_VERSION: '18.x'
+  NODE_VERSION: '18.0.0'
   AZURE_WEBAPP_NAME: portfolio-surya-ml
-  AZURE_WEBAPP_PACKAGE_PATH: 'dist'
+  AZURE_WEBAPP_PACKAGE_PATH: '.'
 
 jobs:
   build-and-deploy:
