@@ -3,12 +3,12 @@ name: Azure Web App Deployment
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 env:
   NODE_VERSION: '18.x'
-  AZURE_WEBAPP_NAME: surya-portfolio
+  AZURE_WEBAPP_NAME: portfolio-surya-ml
   AZURE_WEBAPP_PACKAGE_PATH: 'dist'
 
 jobs:
