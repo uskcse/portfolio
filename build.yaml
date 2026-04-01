@@ -31,6 +31,13 @@ steps:
           --platform managed \
           --allow-unauthenticated \
           --port "${_PORT}" \
+          --execution-environment "${_EXECUTION_ENVIRONMENT}" \
+          --cpu "${_CPU}" \
+          --memory "${_MEMORY}" \
+          --concurrency "${_CONCURRENCY}" \
+          --min-instances "${_MIN_INSTANCES}" \
+          --max-instances "${_MAX_INSTANCES}" \
+          --cpu-throttling \
           --set-build-env-vars "EMAILJS_SERVICE_ID=${_EMAILJS_SERVICE_ID},EMAILJS_TEMPLATE_ID=${_EMAILJS_TEMPLATE_ID},EMAILJS_PUBLIC_KEY=${_EMAILJS_PUBLIC_KEY},VITE_EMAILJS_SERVICE_ID=${_EMAILJS_SERVICE_ID},VITE_EMAILJS_TEMPLATE_ID=${_EMAILJS_TEMPLATE_ID},VITE_EMAILJS_PUBLIC_KEY=${_EMAILJS_PUBLIC_KEY}" \
           --quiet
 
@@ -38,6 +45,12 @@ substitutions:
   _SERVICE_NAME: portfolio
   _REGION: us-central1
   _PORT: "8080"
+  _EXECUTION_ENVIRONMENT: gen1
+  _CPU: "0.08"
+  _MEMORY: "128Mi"
+  _CONCURRENCY: "1"
+  _MIN_INSTANCES: "0"
+  _MAX_INSTANCES: "1"
   _EMAILJS_SERVICE_ID: ""
   _EMAILJS_TEMPLATE_ID: ""
   _EMAILJS_PUBLIC_KEY: ""

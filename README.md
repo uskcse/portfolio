@@ -57,6 +57,13 @@ az webapp log tail --name $AZURE_WEBAPP_NAME --resource-group $AZURE_RESOURCE_GR
 ## Google Cloud Run Deployment
 
 Cloud Run deployment is configured with [`build.yaml`](./build.yaml).
+Default runtime profile is set to minimum resources for low cost:
+- `gen1` execution environment
+- `0.08` vCPU
+- `128Mi` memory
+- `min-instances=0`
+- `max-instances=1`
+- `concurrency=1`
 
 ### Setup
 
@@ -86,7 +93,7 @@ gcloud builds submit --config build.yaml
 ```bash
 gcloud builds submit \
   --config build.yaml \
-  --substitutions=_SERVICE_NAME=portfolio,_REGION=asia-south1,_PORT=8080
+  --substitutions=_SERVICE_NAME=portfolio,_REGION=asia-south1,_PORT=8080,_CPU=0.5,_MEMORY=256Mi,_MAX_INSTANCES=2
 ```
 
 ### Verify Deployment
