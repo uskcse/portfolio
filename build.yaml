@@ -1,0 +1,23 @@
+steps:
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        gcloud run deploy "${_SERVICE_NAME}" \
+          --source . \
+          --region "${_REGION}" \
+          --platform managed \
+          --allow-unauthenticated \
+          --port "${_PORT}" \
+          --quiet
+
+substitutions:
+  _SERVICE_NAME: portfolio
+  _REGION: us-central1
+  _PORT: "8080"
+
+timeout: "1200s"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
