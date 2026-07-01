@@ -1,11 +1,24 @@
-import React from 'react';
-import { ExternalLink, Github, Building2 } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 
 const projects = [
   {
+    title: 'AI Platform Engineering',
+    company: 'Best Buy',
+    period: 'Feb 2025 – Present',
+    description: 'Scalable AI/ML platform for content moderation, personalization, and recommendation systems on GCP',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+    technologies: ['Gemini Flash 2.0', 'Vertex AI', 'Kubeflow', 'GKE', 'BigQuery', 'GCS', 'LSTM', 'Vector DB'],
+    achievements: [
+      'Built AI content moderation platform using Gemini Flash 2.0 with Human-in-the-Loop evaluation',
+      'Optimized personalization and recommendation systems using Vertex AI Search (Vector DB)',
+      'Designed production ML pipelines with LSTM, Neural Networks, Random Forest, and Gemini models',
+      'Implemented Kubeflow pipelines for CI/CD and reproducible ML workflows on GKE'
+    ]
+  },
+  {
     title: 'Category Management Expert System',
     company: 'AB-InBev',
-    period: '2022 - Present',
+    period: 'Jul 2022 – Feb 2025',
     description: 'End-to-end category management solution using genetic algorithms and ML for data-driven insights',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
     technologies: ['Genetic Algorithms', 'Azure', 'Computer Vision', 'GenAI', 'Kedro', 'Databricks'],

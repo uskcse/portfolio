@@ -1,48 +1,47 @@
-import React from 'react';
 
 const skills = [
   {
     category: 'Machine Learning',
     items: [
-      'TensorFlow',
-      'PyTorch',
-      'Scikit-learn',
-      'Deep Learning',
-      'Computer Vision',
-      'NLP'
+      'Linear & Logistic Regression',
+      'Random Forest & SVM',
+      'Gradient Boosting (XGBoost)',
+      'Clustering & Dimensionality Reduction',
+      'Recommendation Systems',
+      'Topic Modeling'
     ]
   },
   {
-    category: 'MLOps',
+    category: 'Deep Learning',
     items: [
-      'Azure ML',
-      'MLflow',
-      'Kubeflow',
-      'DVC',
-      'Model Monitoring',
+      'Neural Networks (NN, CNN, RNN)',
+      'LSTM & Transformers',
+      'BERT & GPT',
+      'Vision Transformers',
+      'Transfer Learning',
+      'TensorFlow & PyTorch'
+    ]
+  },
+  {
+    category: 'Cloud & MLOps',
+    items: [
+      'GCP Vertex AI & GKE',
+      'Kubeflow Pipelines',
+      'Azure ML & DevOps',
+      'MLflow & Kedro',
+      'Docker & Kubernetes',
       'CI/CD for ML'
     ]
   },
   {
-    category: 'Azure Cloud',
+    category: 'Tools & Data',
     items: [
-      'Azure Kubernetes Service',
-      'Azure DevOps',
-      'Azure Functions',
-      'Azure Databricks',
-      'Azure Cognitive Services',
-      'Azure Container Registry'
-    ]
-  },
-  {
-    category: 'Data Engineering',
-    items: [
-      'Azure Synapse Analytics',
-      'Azure Data Factory',
-      'Python',
-      'PySpark',
-      'Docker',
-      'Git'
+      'Python, SQL, PySpark',
+      'FastAPI & Pytest',
+      'Databricks & Airflow',
+      'Redis & Celery',
+      'Pandas, NumPy, Scikit-learn',
+      'NLTK, TF-IDF, Word2Vec'
     ]
   }
 ];
@@ -69,8 +68,7 @@ export function Skills() {
         </div>
         <div className="mt-12 text-center">
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Specialized in implementing end-to-end ML solutions on Azure, from model development to production deployment,
-            with a strong focus on scalable and maintainable MLOps practices.
+            Specialized in end-to-end ML solutions across Azure and GCP — from NLP and Computer Vision to production-grade MLOps with Kubeflow, Vertex AI, and real-time model serving.
           </p>
         </div>
       </div>

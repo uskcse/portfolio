@@ -1,4 +1,3 @@
-import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { calculateExperience } from '../utils/experience';
 
@@ -12,7 +11,7 @@ export function Hero() {
           Hi, I'm <span className="text-blue-400">Surya Kumar U</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-8">
-          Machine Learning Engineer | AI Specialist | MLOps Expert
+          Senior AI/ML Engineer | ML Expert | MLOps Specialist
         </p>
         <div className="flex justify-center gap-6 mb-12">
           <a href="https://github.com/uskcse" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
@@ -25,8 +24,8 @@ export function Hero() {
             <Mail size={24} />
           </a>
         </div>
-        <a 
-          href="#contact" 
+        <a
+          href="#contact"
           className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full font-semibold transition-colors inline-block"
         >
           Get In Touch

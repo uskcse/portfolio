@@ -1,4 +1,3 @@
-import React from 'react';
 import { Brain, Code2, Database } from 'lucide-react';
 import { calculateExperience } from '../utils/experience';
 
@@ -11,8 +10,10 @@ export function About() {
         <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
         <div className="max-w-3xl mx-auto text-gray-600 text-lg mb-12 text-center">
           <p>
-            AI Engineer with {experience}+ years of experience in NLP, Computer Vision, and Recommendation Systems. 
-            Specialized in transforming data science prototypes into production-grade solutions and optimizing real-time models.
+            Results-driven Machine Learning Engineer with {experience}+ years of experience in designing, developing, and deploying ML solutions in NLP, Computer Vision, and Recommendation Systems.
+            Expertise in data preprocessing, feature engineering, and model optimization using TensorFlow, PyTorch, and scikit-learn.
+            Proficient in delivering scalable, production-ready systems on Azure, GCP, and AWS.
+            Skilled in MLOps workflows, A/B testing, and aligning AI solutions with business objectives.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
@@ -21,21 +22,21 @@ export function About() {
               <Brain className="text-blue-500" size={32} />
             </div>
             <h3 className="text-xl font-semibold mb-2">AI Expertise</h3>
-            <p className="text-gray-600">Deep experience in ML, NLP, and Computer Vision with proven production deployments.</p>
+            <p className="text-gray-600">Deep experience in ML, NLP, Computer Vision, and Recommendation Systems with proven production deployments at scale.</p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Code2 className="text-blue-500" size={32} />
             </div>
             <h3 className="text-xl font-semibold mb-2">MLOps Specialist</h3>
-            <p className="text-gray-600">Expert in ML pipelines, model deployment, and production optimization.</p>
+            <p className="text-gray-600">Expert in end-to-end ML pipelines, model deployment, A/B testing, and production monitoring with MLflow, Kedro, and Kubeflow.</p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Database className="text-blue-500" size={32} />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Data Engineering</h3>
-            <p className="text-gray-600">Proficient in ETL, data pipelines, and cloud infrastructure on Azure and GCP.</p>
+            <h3 className="text-xl font-semibold mb-2">Cloud & Infrastructure</h3>
+            <p className="text-gray-600">Proficient in Azure, GCP (Vertex AI, GKE, BigQuery), and AWS for building scalable, production-grade AI systems.</p>
           </div>
         </div>
       </div>
