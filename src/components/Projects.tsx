@@ -44,6 +44,90 @@ const projects = [
     ]
   },
   {
+    title: 'Deals – Fraud Detection & Personalization',
+    company: 'Best Buy',
+    period: 'Feb 2025 – Present',
+    description: 'ML service for deal scoring, fraud/risk ranking, and personalized recommendations with GPU-accelerated inference',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80',
+    technologies: ['FastAPI', 'PyTorch', 'XGBoost', 'RAPIDS', 'Vertex AI', 'BigQuery', 'GKE'],
+    achievements: [
+      'Built real-time ML inference APIs for deal scoring and personalization',
+      'Developed fraud pattern detection and risk ranking models',
+      'Enabled GPU-accelerated batch training with RAPIDS on DGX',
+      'Deployed containerized services with health probes and async logging'
+    ]
+  },
+  {
+    title: 'Membership Benefits Engine',
+    company: 'Best Buy',
+    period: 'Feb 2025 – Present',
+    description: 'ML-driven membership scoring, offers, and eligibility engine orchestrated with Kubeflow pipelines',
+    image: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=800&q=80',
+    technologies: ['Kubeflow', 'Seldon Core', 'Vertex AI', 'BigQuery', 'Python'],
+    achievements: [
+      'Built membership scoring and benefit recommendation models',
+      'Engineered features via BigQuery SQL data preparation',
+      'Orchestrated training pipelines with custom Kubeflow components',
+      'Served production models through Seldon Core'
+    ]
+  },
+  {
+    title: 'Content Moderation Platform',
+    company: 'Best Buy',
+    period: 'Feb 2025 – Present',
+    description: 'AI-assisted content moderation dashboard for catalog metadata with human-in-the-loop review workflows',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+    technologies: ['Flask', 'Seldon Core', 'Vertex AI', 'Firestore', 'Cloud DLP', 'Pub/Sub'],
+    achievements: [
+      'Built field-level moderation review dashboard with AI overrides',
+      'Implemented human judgment workflows and moderation analytics',
+      'Integrated Cloud DLP-backed compliance checks',
+      'Enabled async moderation via Pub/Sub-driven pipelines'
+    ]
+  },
+  {
+    title: 'Product Finder – Multi-Agent Discovery',
+    company: 'Best Buy',
+    period: 'Feb 2025 – Present',
+    description: 'Multi-agent conversational AI for product discovery using orchestrated LLM agents with PII safeguards',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80',
+    technologies: ['Google ADK', 'Gemini 2.5 Flash', 'A2A Protocol', 'FastAPI', 'Chainlit', 'Cloud Spanner', 'Presidio'],
+    achievements: [
+      'Orchestrated NLU, discovery, and presentation agents via A2A protocol',
+      'Managed session-based conversation state across services',
+      'Powered real-time product search and ranking on Cloud Spanner',
+      'Added PII detection and distributed tracing with Presidio and Phoenix'
+    ]
+  },
+  {
+    title: 'Fraud / Order Risk Scoring',
+    company: 'Best Buy',
+    period: 'Feb 2025 – Present',
+    description: 'Large-scale fraud and order-risk scoring framework with distributed data processing and Kubeflow orchestration',
+    image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=800&q=80',
+    technologies: ['XGBoost', 'Dask', 'Apache Beam', 'Kubeflow', 'BigQuery', 'FastAPI'],
+    achievements: [
+      'Built order risk scoring models with XGBoost at scale',
+      'Processed large datasets with Dask and Apache Beam',
+      'Orchestrated training and inference via Kubeflow Pipelines',
+      'Served predictions through FastAPI with full test coverage'
+    ]
+  },
+  {
+    title: 'Know Your Product (KYP)',
+    company: 'Best Buy',
+    period: 'Feb 2025 – Present',
+    description: 'Knowledge graph visualization and exploration tool for product catalog intelligence',
+    image: 'https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&w=800&q=80',
+    technologies: ['Streamlit', 'NetworkX', 'Plotly', 'Cloud Spanner', 'Polars'],
+    achievements: [
+      'Built interactive product relationship graphs with NetworkX',
+      'Created network-based product discovery and exploration',
+      'Enabled real-time data filtering with Plotly visualizations',
+      'Backed exploration with Cloud Spanner and BigQuery'
+    ]
+  },
+  {
     title: 'Category Management Expert System',
     company: 'AB-InBev',
     period: 'Jul 2022 – Feb 2025',
@@ -142,12 +226,10 @@ const projects = [
 
 export function Projects() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-blue-50" id="projects">
+    <section className="py-20 bg-gray-50" id="projects">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-3">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-            Projects &amp; Experience
-          </span>
+        <h2 className="text-4xl font-bold text-center mb-3 text-gray-900">
+          Projects &amp; Experience
         </h2>
         <p className="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
           A selection of production AI/ML systems I&apos;ve designed and shipped across my career.
@@ -156,13 +238,13 @@ export function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-gray-100 transition-all duration-300 hover:-translate-y-2 flex flex-col"
+              className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg border border-gray-200 transition-shadow duration-300 flex flex-col"
             >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-48 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 {project.company && (
@@ -184,7 +266,7 @@ export function Projects() {
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 border border-blue-100 rounded-full text-xs font-medium"
+                      className="px-3 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-full text-xs font-medium"
                     >
                       {tech}
                     </span>

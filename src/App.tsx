@@ -1,9 +1,9 @@
-import React from 'react';
-import { Hero } from './components/Hero';
 import { About } from './components/About';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
+import { Hero } from './components/Hero';
+import { Projects } from './components/Projects';
+import { Skills } from './components/Skills';
+import { Timeline } from './components/Timeline';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Timeline />
       <Projects />
       <Contact />
     </div>

@@ -1,69 +1,34 @@
-import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
-import { ContactForm } from './ContactForm';
-// import { useContact } from '../context/ContactContext';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 export function Contact() {
-  // const { isPhoneVisible } = useContact();
-  const isPhoneVisible = true;
-  const phoneNumber = "+91-9677481090";
-  const maskedNumber = "XX-XXXXXXXX90";
-
   return (
     <section className="py-20 bg-white" id="contact">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Get In Touch</h2>
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <Mail className="text-blue-500" />
-                <span>uskcse@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <Phone className="text-blue-500" />
-                <span>+91-9677481090</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <MapPin className="text-blue-500" />
-                <span>Bangalore, India</span>
-              </div>
-            </div>
+      <div className="max-w-3xl mx-auto px-4 text-center">
+        <h2 className="text-4xl font-bold mb-4 text-gray-900">Get In Touch</h2>
+        <p className="text-gray-600 mb-10">
+          Open to AI/ML engineering roles and collaborations. Feel free to reach out.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mb-10">
+          <div className="flex items-center justify-center gap-2 text-gray-700">
+            <Mail className="text-blue-500" size={20} />
+            <span>uskcse@gmail.com</span>
           </div>
-          <form className="space-y-4">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-              <textarea
-                id="message"
-                rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
+          <div className="flex items-center justify-center gap-2 text-gray-700">
+            <Phone className="text-blue-500" size={20} />
+            <span>+91-9677481090</span>
+          </div>
+          <div className="flex items-center justify-center gap-2 text-gray-700">
+            <MapPin className="text-blue-500" size={20} />
+            <span>Bangalore, India</span>
+          </div>
         </div>
+        <a
+          href="mailto:uskcse@gmail.com"
+          className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-md font-semibold transition-colors"
+        >
+          <Mail size={18} />
+          Email Me
+        </a>
       </div>
     </section>
   );
